@@ -65,6 +65,8 @@ public class CustomBackgroundIntro extends AppIntro2 {
 
         // Bind the background to the intro
         setBackgroundView(imageView);
+
+
     }
 
     @Override

@@ -78,4 +78,14 @@ public abstract class AppIntro2 extends AppIntroBase {
     public void setAnimationColors(ArrayList<Integer> colors) {
         transitionColors = colors;
     }
+
+    public void performNextSlide(){
+
+        super.performNext();
+    }
+
+    public static void perfromNext(){
+
+
+    }
 }

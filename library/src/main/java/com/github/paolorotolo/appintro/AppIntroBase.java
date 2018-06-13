@@ -61,6 +61,7 @@ public abstract class AppIntroBase extends AppCompatActivity implements
     protected int selectedIndicatorColor = DEFAULT_COLOR;
     protected int unselectedIndicatorColor = DEFAULT_COLOR;
     public View nextButton;
+    public static View nextButtonSt;
     public View doneButton;
     public View skipButton;
     public View backButton;
@@ -168,6 +169,8 @@ public abstract class AppIntroBase extends AppCompatActivity implements
         pager.setOnNextPageRequestedListener(this);
 
         setScrollDurationFactor(DEFAULT_SCROLL_DURATION_FACTOR);
+
+        nextButtonSt = nextButton;
     }
 
     /**
@@ -1085,8 +1088,8 @@ public abstract class AppIntroBase extends AppCompatActivity implements
         return DEFAULT_COLOR;
     }
 
-    public View getNextButton() {
-        return nextButton;
+    public static View getNextButton() {
+        return nextButtonSt;
     }
 
     public View getDoneButton() {
@@ -1095,5 +1098,15 @@ public abstract class AppIntroBase extends AppCompatActivity implements
 
     public View getSkipButton() {
         return skipButton;
+    }
+
+    public void performNext(){
+
+        nextButton.performClick();
+    }
+
+    public static void showNextSlide(){
+
+        nextButtonSt.performClick();
     }
 }
