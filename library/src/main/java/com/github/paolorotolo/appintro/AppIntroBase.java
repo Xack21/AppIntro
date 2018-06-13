@@ -60,10 +60,10 @@ public abstract class AppIntroBase extends AppCompatActivity implements
     protected int vibrateIntensity = 20;
     protected int selectedIndicatorColor = DEFAULT_COLOR;
     protected int unselectedIndicatorColor = DEFAULT_COLOR;
-    protected View nextButton;
-    protected View doneButton;
-    protected View skipButton;
-    protected View backButton;
+    public View nextButton;
+    public View doneButton;
+    public View skipButton;
+    public View backButton;
     protected FrameLayout indicatorContainer;
     protected int savedCurrentItem;
     protected ArrayList<PermissionObject> permissionsArray = new ArrayList<>();
@@ -150,6 +150,7 @@ public abstract class AppIntroBase extends AppCompatActivity implements
 
         if (nextButton != null) {
             nextButton.setOnClickListener(new NextButtonOnClickListener());
+
         }
 
         if (backButton != null) {
@@ -1078,5 +1079,21 @@ public abstract class AppIntroBase extends AppCompatActivity implements
 
             return false;
         }
+    }
+
+    public static int getDefaultColor() {
+        return DEFAULT_COLOR;
+    }
+
+    public View getNextButton() {
+        return nextButton;
+    }
+
+    public View getDoneButton() {
+        return doneButton;
+    }
+
+    public View getSkipButton() {
+        return skipButton;
     }
 }
