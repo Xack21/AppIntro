@@ -79,13 +79,13 @@ public abstract class AppIntro2 extends AppIntroBase {
         transitionColors = colors;
     }
 
-    public void performNextSlide(){
+    public static void performNextSlide(){
 
-        super.performNext();
+        AppIntroBase.showNextSlide();
     }
 
-    public static void perfromNext(){
+    public void perfromNext(){
 
-
+        AppIntroBase.showNextSlide();
     }
 }

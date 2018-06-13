@@ -1102,7 +1102,7 @@ public abstract class AppIntroBase extends AppCompatActivity implements
 
     public void performNext(){
 
-        nextButton.performClick();
+        //nextButton.performClick();
     }
 
     public static void showNextSlide(){
